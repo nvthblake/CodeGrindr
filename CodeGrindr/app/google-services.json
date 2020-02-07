@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "941958068154",
+    "firebase_url": "https://codegrindr-a904e.firebaseio.com",
+    "project_id": "codegrindr-a904e",
+    "storage_bucket": "codegrindr-a904e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:941958068154:android:cebc26725c02f1b3a34f83",
+        "android_client_info": {
+          "package_name": "com.example.codegrindr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "941958068154-ufr4loiffadbta0p5r7cviv07eu5snek.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZVxDgJ4dPf5rrTEs5pV4uygyqNRS9ZWs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "941958068154-ufr4loiffadbta0p5r7cviv07eu5snek.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

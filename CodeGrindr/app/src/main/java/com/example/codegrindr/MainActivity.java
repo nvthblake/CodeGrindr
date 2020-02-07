@@ -4,11 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import org.w3c.dom.Text;
+
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -16,6 +25,24 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        DatabaseReference dbref = FirebaseDatabase.getInstance().getReference();
+
+        Map<String, String> values = new HashMap<>();
+        values.put("name", "Blake");
+
+        dbref.push().setValue(values, new DatabaseReference.CompletionListener() {
+            @Override
+            public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
+
+                if (databaseError == null) {
+                    Log.i("Info", "Save Successful");
+                }
+                else {
+                    Log.i("Info", "Save Failed");
+                }
+            }
+        });
 
         final Button loginButton = findViewById(R.id.loginButton);
         final TextView signUpTextView = findViewById(R.id.signUpTextView);
